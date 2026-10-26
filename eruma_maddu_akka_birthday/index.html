@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Eruma Maddu Akka! ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #fff8f2;
+      color: #563d42;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 65px 20px;
+    }
+
+    h1, h2 {
+      color: #a94f69;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #fff0e9, #f9dce3);
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    .gift {
+      font-size: 100px;
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.3s ease;
+      animation: giftBounce 2s infinite;
+    }
+
+    .gift:hover {
+      transform: scale(1.15) rotate(-8deg);
+    }
+
+    @keyframes giftBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .gift-message {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.5rem;
+      color: #a94f69;
+      animation: fadeIn 1s ease;
+    }
+
+    .countdown {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #8d4359;
+    }
+
+    /* GENERAL HEADINGS */
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      margin-bottom: 35px;
+      color: #886a70;
+    }
+
+    /* PHOTO GALLERY */
+
+    .gallery-section {
+      background: #fffaf7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 12px 12px 18px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(120, 65, 80, 0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-7px) rotate(-1deg);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .photo-card p {
+      margin-top: 12px;
+      color: #a94f69;
+      font-size: 1rem;
+    }
+
+    /* MEMORIES TIMELINE */
+
+    .timeline-section {
+      background: #fce9e8;
+    }
+
+    .timeline {
+      max-width: 650px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .memory {
+      background: white;
+      padding: 22px;
+      margin: 20px 0;
+      border-left: 5px solid #d9879d;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(120, 65, 80, 0.08);
+    }
+
+    .memory h3 {
+      color: #a94f69;
+      margin-bottom: 8px;
+    }
+
+    /* BIRTHDAY LETTER */
+
+    .letter-section {
+      background: linear-gradient(135deg, #fff4ec, #f9dce3);
+    }
+
+    .letter {
+      max-width: 750px;
+      margin: 30px auto 0;
+      padding: 40px 30px;
+      background: #fffdf9;
+      border: 2px solid #efc4ce;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(120, 65, 80, 0.12);
+      display: none;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .letter h2 {
+      margin-bottom: 25px;
+    }
+
+    .letter p {
+      font-size: 1.1rem;
+      line-height: 2;
+      text-align: left;
+      white-space: normal;
+    }
+
+    .letter-signature {
+      margin-top: 25px;
+      color: #a94f69;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .reveal-button {
+      border: none;
+      padding: 14px 28px;
+      background: #b85f79;
+      color: white;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .reveal-button:hover {
+      background: #91445c;
+      transform: scale(1.05);
+    }
+
+    /* MUSIC SECTION */
+
+    .music-section {
+      background: #fffaf7;
+    }
+
+    audio {
+      width: min(90%, 400px);
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 15px;
+      background: #a94f69;
+      color: white;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* FLOATING MUSIC BUTTON */
+
+    .music-toggle {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+      width: 52px;
+      height: 52px;
+      border: none;
+      border-radius: 50%;
+      background: #a94f69;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* FLOATING HEARTS */
+
+    .floating-heart {
+      position: fixed;
+      bottom: -30px;
+      pointer-events: none;
+      z-index: 999;
+      animation: floatUp 7s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE RESPONSIVENESS */
+
+    @media (max-width: 600px) {
+      section {
+        padding: 50px 15px;
+      }
+
+      .gift {
+        font-size: 80px;
+      }
+
+      .letter {
+        padding: 28px 20px;
+      }
+
+      .letter p {
+        font-size: 1rem;
+      }
+
+      .photo-card img {
+        height: 230px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <h1>Happy Birthday, Eruma Maddu Akka! 🎂</h1>
+
+    <p>
+      A little surprise for someone very special in my life ❤️
+    </p>
+
+    <div class="gift" id="gift" onclick="openGift()">
+      🎁
+    </div>
+
+    <div class="gift-message" id="giftMessage">
+      Surprise! You are the best akka ever! 💗
+    </div>
+
+    <div class="countdown" id="countdown">
+      Loading birthday countdown...
+    </div>
+
+  </section>
+
+
+  <!-- PHOTO GALLERY -->
+
+  <section class="gallery-section">
+
+    <h2 class="section-title">Our Beautiful Memories 📸</h2>
+
+    <p class="section-subtitle">
+      Every picture has a memory, and every memory is special.
+    </p>
+
+    <div class="gallery" id="gallery"></div>
+
+  </section>
+
+
+  <!-- MEMORY TIMELINE -->
+
+  <section class="timeline-section">
+
+    <h2 class="section-title">A Little About Us 💕</h2>
+
+    <p class="section-subtitle">
+      Some bonds are special, and ours is one of them.
+    </p>
+
+    <div class="timeline">
+
+      <div class="memory">
+        <h3>When We Became Siblings ❤️</h3>
+        <p>
+          Thank you for accepting me as your brother.
+          That means more to me than words can explain.
+        </p>
+      </div>
+
+      <div class="memory">
+        <h3>All the Smiles 😊</h3>
+        <p>
+          Your happiness always matters to me.
+          I hope you keep smiling every single day.
+        </p>
+      </div>
+
+      <div class="memory">
+        <h3>Always Together 🤝</h3>
+        <p>
+          No matter what happens, I'll always be there
+          whenever you need me.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PERSONALIZED BIRTHDAY LETTER -->
+
+  <section class="letter-section">
+
+    <h2 class="section-title">A Little Message for You 💌</h2>
+
+    <p class="section-subtitle">
+      There are a few things I want to tell you...
+    </p>
+
+    <button class="reveal-button" onclick="revealLetter()">
+      Open Your Letter 💌
+    </button>
+
+    <div class="letter" id="letter">
+
+      <h2>To My Dearest Akka ❤️</h2>
+
+      <p>
+        Hai Akka! ❤️
+        <br><br>
+
+        First of all, thank you for accepting me as your brother.
+        You are one of the best souls I've ever met.
+        <br><br>
+
+        I always want to see you smiling.
+        Please don't be sad. Whenever you feel sad,
+        just come to me. You can share anything with me.
+        <br><br>
+
+        Please don't leave me alone. I'll always be there
+        for you, no matter what happens.
+        <br><br>
+
+        Keep smiling, stay happy and remember that
+        you will always have me by your side.
+        <br><br>
+
+        Love you, Akka! ❤️
+      </p>
+
+      <div class="letter-signature">
+        Once Again, Happy Birthday, Eruma Maddu Akka! 🎂💗
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MUSIC SECTION -->
+
+  <section class="music-section">
+
+    <h2 class="section-title">A Song for You 🎵</h2>
+
+    <p class="section-subtitle">
+      Play this song and enjoy your special day!
+    </p>
+
+    <audio id="birthdayMusic" controls loop>
+      <source src="music/birthday-song.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      Made with ❤️ especially for Eruma Maddu Akka.
+    </p>
+
+    <p>
+      Keep smiling forever! 😊
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING MUSIC BUTTON -->
+
+  <button
+    class="music-toggle"
+    id="musicToggle"
+    onclick="toggleMusic()"
+    title="Play or pause music"
+  >
+    ▶️
+  </button>
+
+
+  <script>
+
+    // GIFT ANIMATION
+
+    function openGift() {
+
+      const gift = document.getElementById("gift");
+      const message = document.getElementById("giftMessage");
+
+      gift.style.display = "none";
+
+      message.style.display = "block";
+
+      createConfetti();
+    }
+
+
+    // CONFETTI ANIMATION
+
+    function createConfetti() {
+
+      const emojis = ["🎉", "✨", "💖", "🎊", "💕"];
+
+      for (let i = 0; i < 35; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.innerHTML =
+          emojis[Math.floor(Math.random() * emojis.length)];
+
+        confetti.style.position = "fixed";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-30px";
+        confetti.style.fontSize = "22px";
+        confetti.style.zIndex = "2000";
+        confetti.style.pointerEvents = "none";
+        confetti.style.transition = "transform 3s linear, opacity 3s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+
+          confetti.style.transform =
+            `translateY(${window.innerHeight + 100}px) rotate(500deg)`;
+
+          confetti.style.opacity = "0";
+
+        }, 50);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 3200);
+
+      }
+
+    }
+
+
+    // BIRTHDAY COUNTDOWN
+
+    function updateCountdown() {
+
+      const birthday =
+        new Date("2026-10-27T00:00:00+05:30").getTime();
+
+      const now = new Date().getTime();
+
+      const difference = birthday - now;
+
+      const countdown = document.getElementById("countdown");
+
+      if (difference <= 0) {
+
+        countdown.innerHTML =
+          "🎉 It's your special day! Happy Birthday, Akka! ❤️";
+
+        return;
+      }
+
+      const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+      );
+
+      const minutes = Math.floor(
+        (difference % (1000 * 60 * 60)) /
+        (1000 * 60)
+      );
+
+      const seconds = Math.floor(
+        (difference % (1000 * 60)) / 1000
+      );
+
+      countdown.innerHTML =
+        `🎂 Birthday in ${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds!`;
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    // PHOTO GALLERY
+
+    const gallery = document.getElementById("gallery");
+
+    for (let number = 1; number <= 12; number++) {
+
+      const card = document.createElement("div");
+
+      card.className = "photo-card";
+
+      card.innerHTML = `
+        <img
+          src="photos/akka${number}.jpeg"
+          alt="Memory ${number}"
+          loading="lazy"
+          onerror="this.alt='Photo ${number} not found'; this.style.height='260px';"
+        >
+
+        <p>Beautiful Memory ${number} ❤️</p>
+      `;
+
+      gallery.appendChild(card);
+
+    }
+
+
+    // REVEAL PERSONAL LETTER
+
+    function revealLetter() {
+
+      const letter = document.getElementById("letter");
+
+      letter.style.display = "block";
+
+      letter.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+
+    // MUSIC PLAYER
+
+    const music = document.getElementById("birthdayMusic");
+
+    const musicToggle = document.getElementById("musicToggle");
+
+
+    function toggleMusic() {
+
+      if (music.paused) {
+
+        music.play()
+          .then(() => {
+            musicToggle.innerHTML = "⏸️";
+          })
+          .catch(() => {
+            alert("Please check that your birthday song is inside the music folder.");
+          });
+
+      } else {
+
+        music.pause();
+
+        musicToggle.innerHTML = "▶️";
+
+      }
+
+    }
+
+
+    music.addEventListener("play", () => {
+      musicToggle.innerHTML = "⏸️";
+    });
+
+    music.addEventListener("pause", () => {
+      musicToggle.innerHTML = "▶️";
+    });
+
+
+    // FLOATING HEARTS
+
+    function createHeart() {
+
+      const heart = document.createElement("div");
+
+      heart.className = "floating-heart";
+
+      heart.innerHTML = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (Math.random() * 18 + 15) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+
+    }
+
+    setInterval(createHeart, 1200);
+
+  </script>
+
+</body>
+</html>
